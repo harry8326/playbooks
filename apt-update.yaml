@@ -1,1 +1,9 @@
-testfile
+- hosts: all
+
+  become: true
+  tasks:
+    # Update packages
+    - name: update apt packages
+      apt:
+        update: yes
+        update_cache: yes
